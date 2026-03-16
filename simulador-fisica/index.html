@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Física | Laboratorio Virtual</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="controls">
+            <h2>Configuración</h2>
+            
+            <div class="input-group">
+                <label>Velocidad Inicial: <span id="v0_val">50</span> m/s</label>
+                <input type="range" id="v0" min="10" max="100" value="50">
+            </div>
+
+            <div class="input-group">
+                <label>Ángulo: <span id="angle_val">45</span>°</label>
+                <input type="range" id="angle" min="0" max="90" value="45">
+            </div>
+
+            <div class="input-group">
+                <label>Gravedad: <span id="gravity_val">9.8</span> m/s²</label>
+                <input type="range" id="gravity" min="1" max="20" step="0.1" value="9.8">
+            </div>
+
+            <button id="launchBtn">Lanzar Proyectil</button>
+            <button id="clearBtn" class="secondary">Limpiar Pantalla</button>
+            
+            <div class="metrics">
+                <h3>Métricas Resultantes</h3>
+                <p>Alcance Máximo: <span id="m_dist">0</span> m</p>
+                <p>Altura Máxima: <span id="m_height">0</span> m</p>
+            </div>
+        </aside>
+
+        <main class="simulation">
+            <canvas id="canvas"></canvas>
+        </main>
+    </div>
+
+    <script src="js/engine.js"></script>
+    
+    <script src="js/canvas.js"></script>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
